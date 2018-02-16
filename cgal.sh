@@ -15,11 +15,16 @@ case $ARCHITECTURE in
     [[ ! $BOOST_ROOT ]] && BOOST_ROOT=`brew --prefix boost`
   ;;
 esac
-PKGID=35136
-URL="https://gforge.inria.fr/frs/download.php/file/${PKGID}/"
+###########
+# my hack #
+###########
+#PKGID=35136
+#URL="https://gforge.inria.fr/frs/download.php/file/${PKGID}/"
 
-curl -Lo cgal.tar.bz2 "$URL"
-tar xjf cgal.tar.bz2
+#curl -Lo cgal.tar.bz2 "$URL"
+#tar xjf cgal.tar.bz2
+
+cp -r /home/bene/Downloads/src/cgal/CGAL-4.6.3 .
 cd CGAL-*
 
 if [[ "$BOOST_ROOT" != '' ]]; then
