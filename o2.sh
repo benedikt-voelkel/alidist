@@ -11,7 +11,7 @@ requires:
   - Configuration
   - Monitoring
   - ms_gsl
-source: https://github.com/AliceO2Group/AliceO2
+source: https://github.com/benedikt-voelkel/AliceO2.git
 prepend_path:
   ROOT_INCLUDE_PATH: "$O2_ROOT/include"
 incremental_recipe: |
