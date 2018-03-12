@@ -1,10 +1,10 @@
 package: libpng
-version: v1.6.18
+version: v1.6.34
 requires:
  - AliEn-Runtime:(?!.*ppc64)
 build_requires:
  - CMake
-source: https://git.code.sf.net/p/libpng/code
+source: https://github.com/alisw/libpng
 prefer_system: (?!slc5)
 prefer_system_check: |
   printf "#include <png.h>\n" | gcc -xc++ - `libpng-config --cflags` -c -M 2>&1
@@ -17,7 +17,8 @@ cmake .                                        \
     -DBUILD_SHARED_LIBS=YES                    \
     ${ZLIB_ROOT:+-DZLIB_ROOT:PATH=$ZLIB_ROOT}  \
     -DCMAKE_SKIP_RPATH=YES                     \
-    -DSKIP_INSTALL_FILES=1
+    -DSKIP_INSTALL_FILES=1                     \
+    -DCMAKE_INSTALL_LIBDIR=lib
 make ${JOBS:+-j $JOBS}
 make install
 

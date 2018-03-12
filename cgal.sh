@@ -25,6 +25,8 @@ esac
 #tar xjf cgal.tar.bz2
 
 cp -r /home/bene/Downloads/src/cgal/CGAL-4.6.3 .
+curl -kLo cgal.tar.bz2 "$URL"
+tar xjf cgal.tar.bz2
 cd CGAL-*
 
 if [[ "$BOOST_ROOT" != '' ]]; then

@@ -1,6 +1,6 @@
 package: Vc
 version: "%(tag_basename)s"
-tag: 1.3.2
+tag: 1.3.3
 source: https://github.com/VcDevel/Vc.git
 requires:
   - "GCC-Toolchain:(?!osx)"
@@ -35,5 +35,6 @@ set osname [uname sysname]
 setenv VC_ROOT \$::env(BASEDIR)/$PKGNAME/\$version
 prepend-path PATH \$::env(VC_ROOT)/bin
 prepend-path LD_LIBRARY_PATH \$::env(VC_ROOT)/lib
+prepend-path ROOT_INCLUDE_PATH \$::env(VC_ROOT)/include
 $([[ ${ARCHITECTURE:0:3} == osx ]] && echo "prepend-path DYLD_LIBRARY_PATH \$::env(VC_ROOT)/lib")
 EoF
