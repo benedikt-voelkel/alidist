@@ -64,6 +64,7 @@ valid_defaults:
   - alo
   - o2-prod
   - o2-ninja
+  - o2-concurrent-engines
 ---
 #!/bin/sh
 export ROOTSYS=$ROOT_ROOT
