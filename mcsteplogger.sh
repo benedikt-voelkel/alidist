@@ -35,7 +35,7 @@ module load BASE/1.0 ${ROOT_VERSION:+ROOT/$ROOT_VERSION-$ROOT_REVISION}     \\
 # Our environment
 setenv MCSTEPLOGGER_RELEASE \$version
 setenv MCSTEPLOGGER_BASEDIR \$::env(BASEDIR)/$PKGNAME
-setenv MCSTEPLOGGER_ROOT \$::env(MCSTEPLOGGER_BASEDIR/\$version
+setenv MCSTEPLOGGER_ROOT \$::env(MCSTEPLOGGER_BASEDIR)/\$version
 prepend-path PATH \$::env(MCSTEPLOGGER_ROOT)/bin
 prepend-path LD_LIBRARY_PATH \$::env(MCSTEPLOGGER_ROOT)/lib
 prepend-path ROOT_INCLUDE_PATH \$::env(MCSTEPLOGGER_ROOT)/include
