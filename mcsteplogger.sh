@@ -3,7 +3,7 @@ version: "%(tag_basename)s"
 tag: dev
 source: https://github.com/benedikt-voelkel/mcsteplogger
 requires:
-  - Boost
+  - boost
   - ROOT
 build_requires:
   - CMake
@@ -31,7 +31,7 @@ set version $PKGVERSION-@@PKGREVISION@$PKGHASH@@
 module-whatis "ALICE Modulefile for $PKGNAME $PKGVERSION-@@PKGREVISION@$PKGHASH@@"
 # Dependencies
 module load BASE/1.0 ${ROOT_VERSION:+ROOT/$ROOT_VERSION-$ROOT_REVISION}     \\
-                     ${BOOST_VERSION:+Boost/$BOOST_VERSION-$BOOST_REVISION}
+                     ${BOOST_VERSION:+boost/$BOOST_VERSION-$BOOST_REVISION}
 # Our environment
 setenv MCSTEPLOGGER_RELEASE \$version
 setenv MCSTEPLOGGER_BASEDIR \$::env(BASEDIR)/$PKGNAME
